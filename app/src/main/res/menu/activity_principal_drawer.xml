@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera_Principal"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="@string/anadir_Nuevo" />
+        <item
+            android:id="@+id/nav_restaurantes_principal"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="@string/restaurantes" />
+        <item
+            android:id="@+id/nav_fabs_Principal"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="@string/todos_fabs" />
+        <item
+            android:id="@+id/nav_opciones_Principal"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="@string/opciones" />
+    </group>
+
+    <item android:title="@string/comunicanos">
+        <menu>
+            <item
+                android:id="@+id/nav_correo_principal"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/correo" />
+            <item
+                android:id="@+id/nav_salir_principal"
+                android:icon="@drawable/ic_menu_send"
+                android:title="@string/salir" />
+
+        </menu>
+    </item>
+
+</menu>

@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">guia de Restaurantes</string>
+    <string name="navigation_drawer_open">abrir Guia de Restaurantes</string>
+    <string name="navigation_drawer_close">cerrar Guia de Restaurantes</string>
+    <string name="nav_header_title">Guia de Restaurantes</string>
+    <string name="nav_header_subtitle">www.restaurantguide.com</string>
+    <string name="nav_header_desc">Guia de Restaurantes</string>
+    <string name="action_settings">Opciones</string>
+    <string name="anadir_Nuevo">Añadir Nuevo</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="todos_fabs">Todos los Favoritos</string>
+    <string name="comunicanos">Comunicanos</string>
+    <string name="opciones">Opciones</string>
+    <string name="correo">restauranteguide@rest.com</string>
+    <string name="salir">Salir</string>
+</resources>
