@@ -2,6 +2,7 @@ package restaurantguide.cifprodolfoucha.com.restaurantguide;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -99,8 +100,20 @@ public class Principal extends AppCompatActivity
         } else if (id == R.id.nav_correo_principal) {
 
             Intent send = new Intent (Intent.ACTION_SEND);
-            send.setType("*/*");
+            send.setType("text/plain");
+
+            System.out.println("banana");
+
+            ClipboardManager clipB = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
+            ClipData clip = ClipData.newPlainText(null,"restaurantguide@rest.com");
+            clipB.setPrimaryClip(clip);
+
+            Toast toast = Toast.makeText(this, "restaurantguide@rest.com", Toast.LENGTH_LONG);
+            toast.show();
+
             send.putExtra(Intent.EXTRA_EMAIL,"restaurantguide@rest.com");
+
+
             if(send.resolveActivity(getPackageManager())!=null){
                 startActivity(send);
             }
