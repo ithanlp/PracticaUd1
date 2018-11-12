@@ -13,4 +13,23 @@
     <string name="opciones">Opciones</string>
     <string name="correo">restauranteguide@rest.com</string>
     <string name="salir">Salir</string>
+    <string name="favorito">Favorito</string>
+    <string name="nombre_del_plato">Nombre Del Plato</string>
+    <string name="descripcion">Descripcion</string>
+    <string name="cercanos">Cercanos</string>
+    <string name="guardados">Guardados</string>
+    <string name="nuevo">Nuevo</string>
+    <string name="blanco">Blanco</string>
+    <string name="modo_dise_o">Modo Diseño</string>
+    <string name="idioma">Idioma</string>
+    <string name="informacion">Informacion</string>
+    <string name="programa_realizado_por_ithan_y_carlos_n_nderechos_reservados_n_ncontacte_con_nosotros_si_tiene_algun_problema">Programa realizado por Ithan y Carlos.   Derechos reservados.   Contacte con nosotros si tiene algun problema.</string>
+
+    <string-array name="idiomas">
+        <item>Español</item>
+        <item>Ingles</item>
+        <item>Gallego</item>
+    </string-array>
+
+
 </resources>

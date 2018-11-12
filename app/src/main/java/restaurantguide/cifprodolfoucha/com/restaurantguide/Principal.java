@@ -34,8 +34,9 @@ public class Principal extends AppCompatActivity
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+                Intent intent = new Intent(Principal.this, Nueva_Entrada.class);
+                startActivity(intent);
+
             }
         });
 
@@ -75,7 +76,8 @@ public class Principal extends AppCompatActivity
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings_principal) {
-            return true;
+            Intent intent = new Intent(Principal.this, Opciones.class);
+            startActivity(intent);
         } else if(id == R.id.action_exit_principal){
             System.exit(0);
         }
@@ -90,19 +92,20 @@ public class Principal extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_camera_Principal) {
-            // Handle the camera action
+            Intent intent = new Intent(Principal.this, Nueva_Entrada.class);
+            startActivity(intent);
         } else if (id == R.id.nav_restaurantes_principal) {
 
         } else if (id == R.id.nav_fabs_Principal) {
 
         } else if (id == R.id.nav_opciones_Principal) {
-
+            Intent intent = new Intent(Principal.this, Opciones.class);
+            startActivity(intent);
         } else if (id == R.id.nav_correo_principal) {
 
             Intent send = new Intent (Intent.ACTION_SEND);
             send.setType("text/plain");
 
-            System.out.println("banana");
 
             ClipboardManager clipB = (ClipboardManager) getSystemService(Context.CLIPBOARD_SERVICE);
             ClipData clip = ClipData.newPlainText(null,"restaurantguide@rest.com");
