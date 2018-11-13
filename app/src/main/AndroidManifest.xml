@@ -2,6 +2,20 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="restaurantguide.cifprodolfoucha.com.restaurantguide">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true">
+    </uses-feature>
+
+    <uses-feature
+        android:name="android.hardware.location.gps">
+    </uses-feature>
+
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION">
+
+    </uses-permission>
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -20,7 +34,9 @@
             </intent-filter>
         </activity>
         <activity android:name=".Nueva_Entrada" />
-        <activity android:name=".Opciones"></activity>
+        <activity android:name=".Opciones" />
+        <activity android:name=".Listado_Restaurantes" />
+        <activity android:name=".Listado_Favoritos"></activity>
     </application>
 
 </manifest>

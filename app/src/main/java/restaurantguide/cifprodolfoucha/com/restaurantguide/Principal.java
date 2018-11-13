@@ -96,8 +96,12 @@ public class Principal extends AppCompatActivity
             startActivity(intent);
         } else if (id == R.id.nav_restaurantes_principal) {
 
-        } else if (id == R.id.nav_fabs_Principal) {
+            Intent rest = new Intent (Principal.this, Listado_Restaurantes.class);
+            startActivity(rest);
 
+        } else if (id == R.id.nav_fabs_Principal) {
+            Intent rest = new Intent (Principal.this, Listado_Favoritos.class);
+            startActivity(rest);
         } else if (id == R.id.nav_opciones_Principal) {
             Intent intent = new Intent(Principal.this, Opciones.class);
             startActivity(intent);
