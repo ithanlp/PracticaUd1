@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="restaurantguide.cifprodolfoucha.com.restaurantguide">
 
+
+
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true">
@@ -26,7 +28,8 @@
         <activity
             android:name=".Principal"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            android:theme="@style/AppTheme.NoActionBar"
+            android:screenOrientation="fullSensor">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
