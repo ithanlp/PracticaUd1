@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">guia de Restaurantes</string>
+    <string name="navigation_drawer_open">abrir Guia de Restaurantes</string>
+    <string name="nav_header_subtitle">www.restaurantguide.com</string>
+    <string name="nav_header_desc">Guia de Restaurantes</string>
+    <string name="action_settings">Opcions</string>
+    <string name="anadir_Nuevo">Engadir Novo</string>
+    <string name="restaurantes">Restaurantes</string>
+    <string name="todos_fabs">Todos os Favoritos</string>
+    <string name="comunicanos">Comuniquenos</string>
+    <string name="opciones">Opcións</string>
+    <string name="correo">restauranteguide@rest.com</string>
+    <string name="salir">Sair</string>
+    <string name="favorito">Favorito</string>
+    <string name="nombre_del_plato">Nome Do Prato</string>
+    <string name="descripcion">Descripción</string>
+    <string name="cercanos">Cercanos</string>
+    <string name="guardados">Gardados</string>
+    <string name="nuevo">Novo</string>
+    <string name="blanco">Branco</string>
+    <string name="modo_dise_o">Modo Deseño</string>
+    <string name="idioma">Linguaxe</string>
+    <string name="informacion">Información</string>
+    <string name="programa_realizado_por_ithan_y_carlos_n_nderechos_reservados_n_ncontacte_con_nosotros_si_tiene_algun_problema">Programa realizado por Ithan e Carlos. Dereitos reservados. Contactenos se ten algún problema.</string>
+    <string name="nav_header_principal">Guia de Restaurantes</string>
+    <string name="nav_header_title">Guia de Restaurantes</string>
+    <string name="navigation_drawer_close">Pechar</string>
+</resources>

@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <CheckBox
-        android:id="@+id/checkBox"
+        android:id="@+id/chkFav"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText"
+        android:id="@+id/etNombrePlato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -49,23 +49,25 @@
         android:layout_marginTop="16dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText" />
+        app:layout_constraintTop_toBottomOf="@+id/etNombrePlato" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etDescripcion"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="16dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="8dp"
         android:layout_marginEnd="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:ems="10"
         android:hint="@string/descripcion"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/btnAceptar"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.18" />
 
     <Button
         android:id="@+id/btnAceptar"
@@ -93,19 +95,20 @@
         app:layout_constraintTop_toBottomOf="@+id/spinner">
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/rbtnCercanos"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="16dp"
             android:layout_marginTop="16dp"
             android:layout_weight="1"
+            android:checked="true"
             android:text="@string/cercanos"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
         <RadioButton
-            android:id="@+id/radioButton2"
+            android:id="@+id/rbtnGuardados"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
@@ -114,12 +117,12 @@
             android:layout_weight="1"
             android:text="@string/guardados"
             android:textAlignment="center"
-            app:layout_constraintEnd_toStartOf="@+id/radioButton3"
+            app:layout_constraintEnd_toStartOf="@+id/rbtnCercanos"
             app:layout_constraintStart_toEndOf="@+id/radioButton"
             app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
         <RadioButton
-            android:id="@+id/radioButton3"
+            android:id="@+id/rbtnNuevo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"

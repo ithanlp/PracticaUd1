@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">guia de Restaurantes</string>
     <string name="navigation_drawer_open">abrir Guia de Restaurantes</string>
-    <string name="navigation_drawer_close">cerrar Guia de Restaurantes</string>
-    <string name="nav_header_title">Guia de Restaurantes</string>
+    <string name="nav_header_principal">guia de Restaurantes</string>
+    <string name="nav_header_title">guia de Restaurantes</string>
     <string name="nav_header_subtitle">www.restaurantguide.com</string>
     <string name="nav_header_desc">Guia de Restaurantes</string>
+    <string name="navigation_drawer_close">Cerrar</string>
     <string name="action_settings">Opciones</string>
     <string name="anadir_Nuevo">Añadir Nuevo</string>
     <string name="restaurantes">Restaurantes</string>
@@ -30,6 +30,7 @@
         <item>Ingles</item>
         <item>Gallego</item>
     </string-array>
+    <string name="app_name">guia de Restaurantes</string>
 
 
 </resources>

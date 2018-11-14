@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Restaurant Guide</string>
+    <string name="navigation_drawer_open">Open restaurant guide</string>
+    <string name="nav_header_subtitle">www.restaurantguide.com</string>
+    <string name="nav_header_desc">Restaurant Guide</string>
+    <string name="action_settings">Options</string>
+    <string name="anadir_Nuevo">Add New</string>
+    <string name="restaurantes">Restaurants</string>
+    <string name="todos_fabs">All Favorites</string>
+    <string name="comunicanos">Contact Us</string>
+    <string name="opciones">Options</string>
+    <string name="correo">restauranteguide@rest.com</string>
+    <string name="salir">Exit</string>
+    <string name="favorito">Favorite</string>
+    <string name="nombre_del_plato">Name of Dish</string>
+    <string name="descripcion">Description</string>
+    <string name="cercanos">Nearby</string>
+    <string name="guardados">Saved</string>
+    <string name="nuevo">New</string>
+    <string name="blanco">White</string>
+    <string name="modo_dise_o">Design Mode</string>
+    <string name="idioma">Language</string>
+    <string name="informacion">Information</string>
+    <string name="programa_realizado_por_ithan_y_carlos_n_nderechos_reservados_n_ncontacte_con_nosotros_si_tiene_algun_problema">App developed by Ithan and Carlos. Rights reserved. Contact us if you have any problems.</string>
+    <string name="nav_header_principal">Restaurant Guide</string>
+    <string name="nav_header_title">Restaurant Guide</string>
+    <string name="navigation_drawer_close">Close</string>
+</resources>

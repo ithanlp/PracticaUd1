@@ -2,66 +2,120 @@ package restaurantguide.cifprodolfoucha.com.restaurantguide;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.view.Menu;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
 
-public class Nueva_Entrada extends Activity {
+public class Nueva_Entrada extends Activity implements OnClickListener {
 
     ImageView img;
     Spinner sp;
-    static final int REQEST_IMAGE_CAPTURE = 1;
     Button btn;
+    boolean control = false;
+    EditText etNombrePlato;
+    String nombrePlato;
+    EditText etDescripcion;
+    String descripcion;
+    CheckBox chkFav;
+    RadioButton rbtnCercanos;
+    RadioButton rbtnGuardados;
+    RadioButton rbtnNuevo;
+
+    Bitmap bit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_nueva__entrada);
         sp = findViewById(R.id.spinner);
         btn = findViewById(R.id.btnAceptar);
         img = findViewById(R.id.imageView3);
-        foto();
+        chkFav=findViewById(R.id.chkFav);
+        etNombrePlato = findViewById(R.id.etNombrePlato);
+        rbtnCercanos = findViewById(R.id.rbtnCercanos);
+        rbtnGuardados = findViewById(R.id.rbtnGuardados);
+        rbtnNuevo = findViewById(R.id.rbtnNuevo);
+        etDescripcion = findViewById(R.id.etDescripcion);
 
-        setContentView(R.layout.activity_nueva__entrada);
-
-
+        img.setOnClickListener(this);
     }
 
 
-    public void onClick(View viev){
-        if(viev.getId()==btn.getId()){
+    public void onClick(View viev) {
+        if (viev.getId() == btn.getId()) {
             finish();
         }
+        if (viev.getId() == img.getId()) {
+            foto();
+        }
     }
 
 
-    public void foto(){
-
+    public void foto() {
+        control = true;
         Intent foto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        startActivityForResult(foto, 7777);
+    }
 
-        startActivity(foto);
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (requestCode == 7777 && resultCode == RESULT_OK) {
+            bit = (Bitmap) data.getExtras().get("data");
+            img.setImageBitmap(bit);
+        }
+    }
 
 
-        Bundle extras = foto.getExtras();
-        System.out.println("EXTRASSSSSSSSSSS------ "+foto.getExtras());
-        if(foto.hasExtra("data")){
-            img.setImageBitmap((Bitmap) foto.getParcelableExtra("data"));
-        }else {
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putParcelable("bitmap", bit);
+        outState.putString("plato", etNombrePlato.getText().toString());
+        outState.putString("desc", etDescripcion.getText().toString());
+        outState.putBoolean("fav",chkFav.isChecked());
+        outState.putBoolean("cercano",rbtnCercanos.isChecked());
+        outState.putBoolean("guardado",rbtnGuardados.isChecked());
+        outState.putBoolean("nuevo",rbtnNuevo.isChecked());
 
-            Toast t = Toast.makeText(this, "No funciona", Toast.LENGTH_LONG);
-            t.show();
+    }
+
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+
+        bit = savedInstanceState.getParcelable("bitmap");
+        img.setImageBitmap(bit);
+        nombrePlato = savedInstanceState.getString("plato");
+        etNombrePlato.setText(nombrePlato);
+        descripcion = savedInstanceState.getString("desc");
+        etDescripcion.setText(descripcion);
+        boolean fav=savedInstanceState.getBoolean("fav");
+        if (fav){
+            chkFav.setChecked(true);
+        }
+        boolean cercano=savedInstanceState.getBoolean("cercano");
+        boolean guardado=savedInstanceState.getBoolean("guardado");
+        if (cercano){
+            rbtnCercanos.setChecked(true);
+        }else if(guardado){
+            rbtnCercanos.setChecked(true);
+        }else{
+            rbtnNuevo.setChecked(true);
         }
 
+
     }
-
-
-
-
-
 
 
 }

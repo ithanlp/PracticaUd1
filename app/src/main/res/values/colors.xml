@@ -4,4 +4,5 @@
     <color name="cor_Primary">#3F51B5</color>
     <color name="cor_PrimaryDark">#303F9F</color>
     <color name="cor_Accent">#FF4081</color>
+    <color name="test">#CAFE44</color>
 </resources>
