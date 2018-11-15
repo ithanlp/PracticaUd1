@@ -1,16 +1,22 @@
 package restaurantguide.cifprodolfoucha.com.restaurantguide;
 
 import android.app.Activity;
+
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.util.Locale;
+
 public class Opciones extends Activity {
 
     TextView tv;
+    Spinner sp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,10 +37,12 @@ public class Opciones extends Activity {
             }
         });
 
+        sp = findViewById(R.id.spinner);
 
         tv = findViewById(R.id.Info);
 
     }
+
 
     public void Onclick(View view) {
         if(view.getId()==R.id.btnInfo){

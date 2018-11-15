@@ -24,6 +24,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     Button btn;
     boolean control = false;
     EditText etNombrePlato;
+    EditText etNombreRestaurante;
     String nombrePlato;
     EditText etDescripcion;
     String descripcion;
@@ -43,6 +44,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
         img = findViewById(R.id.imageView3);
         chkFav=findViewById(R.id.chkFav);
         etNombrePlato = findViewById(R.id.etNombrePlato);
+        etNombreRestaurante = findViewById(R.id.txt_NuevoRestaurante);
         rbtnCercanos = findViewById(R.id.rbtnCercanos);
         rbtnGuardados = findViewById(R.id.rbtnGuardados);
         rbtnNuevo = findViewById(R.id.rbtnNuevo);
@@ -59,6 +61,22 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
         if (viev.getId() == img.getId()) {
             foto();
         }
+
+        //Pendiente de que fundione
+
+        /*if (viev.getId() == rbtnNuevo.getId()){
+            sp.setVisibility(View.INVISIBLE);
+            etNombreRestaurante.setVisibility(View.VISIBLE);
+        }
+        if(viev.getId() == rbtnCercanos.getId()){
+            sp.setVisibility(View.VISIBLE);
+            etNombreRestaurante.setVisibility(View.INVISIBLE);
+        }
+        if(viev.getId() == rbtnGuardados.getId()){
+            sp.setVisibility(View.VISIBLE);
+            etNombreRestaurante.setVisibility(View.INVISIBLE);
+        } */
+
     }
 
 
