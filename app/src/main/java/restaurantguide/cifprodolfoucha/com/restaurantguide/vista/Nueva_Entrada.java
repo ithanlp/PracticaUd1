@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide;
+package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +16,9 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
 
 public class Nueva_Entrada extends Activity implements OnClickListener {
 
@@ -56,6 +59,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
 
     public void onClick(View viev) {
         if (viev.getId() == btn.getId()) {
+
             finish();
         }
         if (viev.getId() == img.getId()) {

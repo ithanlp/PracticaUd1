@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide;
+package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
 
 import android.app.Activity;
 
@@ -12,6 +12,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.Locale;
+
+import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
 
 public class Opciones extends Activity {
 

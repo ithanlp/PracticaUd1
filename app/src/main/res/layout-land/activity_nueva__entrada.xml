@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Nueva_Entrada">
+    tools:context=".vista.Nueva_Entrada">
 
 
     <ScrollView

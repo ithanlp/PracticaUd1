@@ -1,13 +1,11 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide;
+package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -19,11 +17,17 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.util.ArrayList;
+
+import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
+
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     ClipData clip;
     ClipboardManager clipboard;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -101,6 +105,7 @@ public class Principal extends AppCompatActivity
             startActivity(rest);
 
         } else if (id == R.id.nav_fabs_Principal) {
+
             Intent rest = new Intent (Principal.this, Listado_Favoritos.class);
             startActivity(rest);
         } else if (id == R.id.nav_opciones_Principal) {
