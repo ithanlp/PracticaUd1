@@ -28,7 +28,7 @@
             android:orientation="vertical">
 
             <ImageView
-                android:id="@+id/imageView3"
+                android:id="@+id/imgPlato"
                 android:layout_width="151dp"
                 android:layout_height="171dp"
                 android:layout_marginStart="16dp"
@@ -59,7 +59,7 @@
                 android:inputType="textImeMultiLine|textPersonName"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+                app:layout_constraintTop_toBottomOf="@+id/imgPlato" />
 
             <Spinner
                 android:id="@+id/spinner"

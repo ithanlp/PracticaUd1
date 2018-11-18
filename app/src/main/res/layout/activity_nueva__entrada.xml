@@ -7,7 +7,7 @@
     tools:context=".vista.Nueva_Entrada">
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/imgPlato"
         android:layout_width="151dp"
         android:layout_height="171dp"
         android:layout_marginStart="16dp"
@@ -38,7 +38,7 @@
         android:inputType="textImeMultiLine|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3" />
+        app:layout_constraintTop_toBottomOf="@+id/imgPlato" />
 
     <Spinner
         android:id="@+id/spinner"
@@ -135,13 +135,13 @@
     </RadioGroup>
 
     <EditText
-        android:id="@+id/txt_NuevoRestaurante"
+        android:id="@+id/txtNuevoRestaurante"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Escriba el nombre del @string/restaurantes"
         android:inputType="textPersonName"
