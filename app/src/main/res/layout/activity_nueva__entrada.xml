@@ -7,7 +7,7 @@
     tools:context=".vista.Nueva_Entrada">
 
     <ImageView
-        android:id="@+id/imgPlato"
+        android:id="@+id/ivPlato"
         android:layout_width="151dp"
         android:layout_height="171dp"
         android:layout_marginStart="16dp"
@@ -38,10 +38,10 @@
         android:inputType="textImeMultiLine|textPersonName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imgPlato" />
+        app:layout_constraintTop_toBottomOf="@+id/ivPlato" />
 
     <Spinner
-        android:id="@+id/spinner"
+        android:id="@+id/spRestDelPlato"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="16dp"
@@ -92,7 +92,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinner">
+        app:layout_constraintTop_toBottomOf="@+id/spRestDelPlato">
 
         <RadioButton
             android:id="@+id/rbtnCercanos"
@@ -105,7 +105,7 @@
             android:text="@string/cercanos"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spRestDelPlato" />
 
         <RadioButton
             android:id="@+id/rbtnGuardados"
@@ -119,7 +119,7 @@
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/rbtnCercanos"
             app:layout_constraintStart_toEndOf="@+id/radioButton"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spRestDelPlato" />
 
         <RadioButton
             android:id="@+id/rbtnNuevo"
@@ -131,17 +131,17 @@
             android:text="@string/nuevo"
             android:textAlignment="center"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/spinner" />
+            app:layout_constraintTop_toBottomOf="@+id/spRestDelPlato" />
     </RadioGroup>
 
     <EditText
         android:id="@+id/txtNuevoRestaurante"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
         android:ems="10"
         android:hint="Escriba el nombre del @string/restaurantes"
         android:inputType="textPersonName"

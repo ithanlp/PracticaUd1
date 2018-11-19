@@ -2,7 +2,6 @@ package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
 
 import android.app.Activity;
 
-import android.content.res.Configuration;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
@@ -10,8 +9,6 @@ import android.widget.Spinner;
 import android.widget.Switch;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import java.util.Locale;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
 
@@ -24,7 +21,7 @@ public class Opciones extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opciones);
 
-        final Switch sw = findViewById(R.id.switch1);
+        final Switch sw = findViewById(R.id.swTema);
 
         sw.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
@@ -39,7 +36,7 @@ public class Opciones extends Activity {
             }
         });
 
-        sp = findViewById(R.id.spinner);
+        sp = findViewById(R.id.spRestDelPlato);
 
         tv = findViewById(R.id.Info);
 

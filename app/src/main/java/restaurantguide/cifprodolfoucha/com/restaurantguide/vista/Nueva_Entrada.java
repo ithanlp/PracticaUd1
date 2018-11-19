@@ -2,11 +2,12 @@ package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.content.res.Configuration;
 import android.graphics.Bitmap;
-import android.view.Menu;
+import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
+import android.text.format.Time;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -15,10 +16,11 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.Spinner;
-import android.widget.Toast;
+
+import java.io.File;
+import java.util.ArrayList;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
 
 public class Nueva_Entrada extends Activity implements OnClickListener {
 
@@ -35,19 +37,19 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     RadioButton rbtnCercanos;
     RadioButton rbtnGuardados;
     RadioButton rbtnNuevo;
-
+    public static ArrayList<String> imags = new ArrayList<>();
     Bitmap bit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nueva__entrada);
-        sp = findViewById(R.id.spinner);
+        sp = findViewById(R.id.spRestDelPlato);
         btn = findViewById(R.id.btnAceptar);
-        img = findViewById(R.id.imageView3);
+        img = findViewById(R.id.ivPlato);
         chkFav=findViewById(R.id.chkFav);
         etNombrePlato = findViewById(R.id.etNombrePlato);
-        etNombreRestaurante = findViewById(R.id.txt_NuevoRestaurante);
+        etNombreRestaurante = findViewById(R.id.txtNuevoRestaurante);
         rbtnCercanos = findViewById(R.id.rbtnCercanos);
         rbtnGuardados = findViewById(R.id.rbtnGuardados);
         rbtnNuevo = findViewById(R.id.rbtnNuevo);
@@ -87,6 +89,19 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     public void foto() {
         control = true;
         Intent foto = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        //Time now = new Time();
+        //now.setToNow();
+
+        //String arch = Environment.getExternalStorageDirectory() + "/external_sd/Fotos/"+ "ID" +now.format2445().toString() +".jpg";
+
+        //imags.add(arch);
+
+        //File f = new File(arch);
+
+        //Uri uri = Uri.fromFile(f);
+
+        //foto.putExtra(MediaStore.EXTRA_OUTPUT, uri);
+
         startActivityForResult(foto, 7777);
     }
 
@@ -94,6 +109,8 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (requestCode == 7777 && resultCode == RESULT_OK) {
             bit = (Bitmap) data.getExtras().get("data");
+            System.out.println(bit.toString());
+
             img.setImageBitmap(bit);
         }
     }

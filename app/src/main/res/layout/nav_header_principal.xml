@@ -14,7 +14,7 @@
     android:theme="@style/ThemeOverlay.AppCompat.Dark">
 
     <ImageView
-        android:id="@+id/imvLogo_Principal"
+        android:id="@+id/imgLogo"
         android:layout_width="105dp"
         android:layout_height="94dp"
         android:contentDescription="@string/nav_header_desc"

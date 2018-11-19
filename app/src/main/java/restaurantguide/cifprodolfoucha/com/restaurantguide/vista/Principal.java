@@ -4,6 +4,7 @@ import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -28,6 +29,7 @@ public class Principal extends AppCompatActivity
     ClipData clip;
     ClipboardManager clipboard;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,13 +47,15 @@ public class Principal extends AppCompatActivity
             }
         });
 
+
+
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = findViewById(R.id.nav_view_Principal);
+        NavigationView navigationView = findViewById(R.id.navPrincipal);
         navigationView.setNavigationItemSelectedListener(this);
     }
 
@@ -80,10 +84,10 @@ public class Principal extends AppCompatActivity
         int id = item.getItemId();
 
         //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings_principal) {
+        if (id == R.id.actionOpciones) {
             Intent intent = new Intent(Principal.this, Opciones.class);
             startActivity(intent);
-        } else if(id == R.id.action_exit_principal){
+        } else if(id == R.id.actionSalir){
             System.exit(0);
         }
 
@@ -96,22 +100,22 @@ public class Principal extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera_Principal) {
+        if (id == R.id.navNuevoPlato) {
             Intent intent = new Intent(Principal.this, Nueva_Entrada.class);
             startActivity(intent);
-        } else if (id == R.id.nav_restaurantes_principal) {
+        } else if (id == R.id.navListaRestaurantes) {
 
             Intent rest = new Intent (Principal.this, Listado_Restaurantes.class);
             startActivity(rest);
 
-        } else if (id == R.id.nav_fabs_Principal) {
+        } else if (id == R.id.navListaFavs) {
 
             Intent rest = new Intent (Principal.this, Listado_Favoritos.class);
             startActivity(rest);
-        } else if (id == R.id.nav_opciones_Principal) {
+        } else if (id == R.id.navOpciones) {
             Intent intent = new Intent(Principal.this, Opciones.class);
             startActivity(intent);
-        } else if (id == R.id.nav_correo_principal) {
+        } else if (id == R.id.navCorreo) {
 
             Intent send = new Intent (Intent.ACTION_SEND);
             send.setType("text/plain");
@@ -131,7 +135,7 @@ public class Principal extends AppCompatActivity
                 startActivity(send);
             }
 
-        } else if(id == R.id.nav_salir_principal){
+        } else if(id == R.id.navSalir){
             System.exit(0);
         }
 

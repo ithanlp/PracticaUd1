@@ -19,7 +19,7 @@ android {
     productFlavors {
     }
     sourceSets { main { res.srcDirs = ['src/main/res', 'src/main/res/imagenes'] } }
-    buildToolsVersion '27.0.3'
+    buildToolsVersion '28.0.3'
 }
 
 dependencies {
