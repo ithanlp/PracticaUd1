@@ -26,6 +26,7 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
+import java.util.UUID;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
 
@@ -40,6 +41,8 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     private EditText etNombreRestaurante;
     private String nombrePlato;
     private EditText etDescripcion;
+    private EditText etRuta;
+
     private String descripcion;
     private CheckBox chkFav;
     private RadioButton rbtnCercanos;
@@ -71,6 +74,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
         rbtnGuardados = findViewById(R.id.rbtnGuardados);
         rbtnNuevo = findViewById(R.id.rbtnNuevo);
         etDescripcion = findViewById(R.id.etDescripcion);
+        etRuta = findViewById(R.id.etRuta);
 
         img.setOnClickListener(this);
     }
@@ -140,10 +144,14 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
             Time now = new Time();
             now.setToNow();
 
-            File file = new File(dir, etNombrePlato.getText().toString().trim()+"-RG-"+now.toString()+".png");
 
-            Toast.makeText(this, "Guardada en principio", Toast.LENGTH_SHORT).show();
+            //UUID.randomUUID genera un código único https://es.wikipedia.org/wiki/Identificador_%C3%BAnico_universal
 
+            File file = new File(dir, UUID.randomUUID()+".png");
+
+            Toast.makeText(this, "Guardada en principio"+file.getAbsolutePath(), Toast.LENGTH_SHORT).show();
+
+            etRuta.setText(file.getAbsolutePath());
             try {
                 out = new FileOutputStream(file);
                 bit.compress(Bitmap.CompressFormat.PNG, 100, out);

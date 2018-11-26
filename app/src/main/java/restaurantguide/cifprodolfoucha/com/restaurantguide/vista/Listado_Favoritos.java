@@ -30,7 +30,9 @@ public class Listado_Favoritos extends AppCompatActivity {
 
         String ruta = "";
 
+
         final String finalRuta = ruta;
+
         gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
