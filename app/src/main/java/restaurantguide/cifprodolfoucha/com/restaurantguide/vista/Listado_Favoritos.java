@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.GridView;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.lang.reflect.GenericArrayType;
 import java.util.ArrayList;
@@ -27,23 +28,13 @@ public class Listado_Favoritos extends AppCompatActivity {
 
         GridView gv = findViewById(R.id.gvFavs);
         gv.setAdapter(new ImageAdapter(this));
-
-        String ruta = "";
-
-
-        final String finalRuta = ruta;
-
-        gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-
-                Intent intent = new Intent();
-                intent.setAction(Intent.ACTION_VIEW);
-                intent.setDataAndType(Uri.parse("file://" + finalRuta), "image/*");
-                startActivity(intent);
-            }
-        });
+            gv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                public void onItemClick(AdapterView<?> parent, View v,
+                                        int position, long id) {
+                    Toast.makeText(getApplicationContext(), "" + position,
+                            Toast.LENGTH_SHORT).show();
+                }
+            });
 
 
     }
