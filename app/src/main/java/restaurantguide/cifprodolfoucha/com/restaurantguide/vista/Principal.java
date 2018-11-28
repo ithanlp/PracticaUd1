@@ -18,17 +18,24 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.util.ArrayList;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.controlador.ConexionBD;
 import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
-    ClipData clip;
-    ClipboardManager clipboard;
-
+    private ClipData clip;
+    private ClipboardManager clipboard;
+    private ConexionBD bd;
+    public InputStream inputStream;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +43,10 @@ public class Principal extends AppCompatActivity
         setContentView(R.layout.activity_principal);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+
+        ConexionBD.getInstance(this.getApplicationContext()).abrirBD();
+        ConexionBD.getInstance(this.getApplicationContext()).mostarDatos();
+        ConexionBD.getInstance(this.getApplicationContext()).cerrarBD();
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btnAñadir);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -47,6 +58,42 @@ public class Principal extends AppCompatActivity
             }
         });
 
+
+        //crear on start
+
+
+
+        String bdDestino = "/data/data/restaurantguide.cifprodolfoucha.com.restaurantguide/databases/"+ConexionBD.NOME_BD;
+
+        File filebdDestino = new File(bdDestino);
+        if(filebdDestino.exists())return;
+
+        String pathbd = "/data/data/restaurantguide.cifprodolfoucha.com.restaurantguide/databases/";
+
+        File filepathdb = new File(pathbd);
+        filepathdb.mkdirs();
+
+
+
+        try{
+            inputStream = getAssets().open(ConexionBD.NOME_BD);
+            OutputStream ops = new FileOutputStream(bdDestino);
+
+            int puntero;
+            byte[] buffer = new byte[2048];
+
+
+            while((puntero = inputStream.read(buffer))>0){
+                ops.write(buffer,0,puntero);
+            }
+
+            inputStream.close();
+            ops.flush();
+            ops.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -9,7 +9,7 @@ public final class PlatosDbModelo {
 
     }
     public static class PlatosDb implements BaseColumns {
-        public static final String NOMBRE_TABLA = "platos";
+        public static final String NOMBRE_TABLA = "platos.db";
         public static final String NOMBRE_COLUMNA_NOMBRE = "nombre";
         public static final String NOMBRE_COLUMNA_IMAGEN = "urlImagen";
         public static final String NOMBRE_COLUMNA_FAVORITO = "favorito";
