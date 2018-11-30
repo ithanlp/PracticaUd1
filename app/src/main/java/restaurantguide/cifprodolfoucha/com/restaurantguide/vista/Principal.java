@@ -44,9 +44,7 @@ public class Principal extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        ConexionBD.getInstance(this.getApplicationContext()).abrirBD();
-        ConexionBD.getInstance(this.getApplicationContext()).mostarDatos();
-        ConexionBD.getInstance(this.getApplicationContext()).cerrarBD();
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.btnAñadir);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -59,42 +57,9 @@ public class Principal extends AppCompatActivity
         });
 
 
-        //crear on start
+        //Crear BD:
 
-
-
-        String bdDestino = "/data/data/restaurantguide.cifprodolfoucha.com.restaurantguide/databases/"+ConexionBD.NOME_BD;
-
-        File filebdDestino = new File(bdDestino);
-        if(filebdDestino.exists())return;
-
-        String pathbd = "/data/data/restaurantguide.cifprodolfoucha.com.restaurantguide/databases/";
-
-        File filepathdb = new File(pathbd);
-        filepathdb.mkdirs();
-
-
-
-        try{
-            inputStream = getAssets().open(ConexionBD.NOME_BD);
-            OutputStream ops = new FileOutputStream(bdDestino);
-
-            int puntero;
-            byte[] buffer = new byte[2048];
-
-
-            while((puntero = inputStream.read(buffer))>0){
-                ops.write(buffer,0,puntero);
-            }
-
-            inputStream.close();
-            ops.flush();
-            ops.close();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        ConexionBD bd = new ConexionBD(this, "platos.bd",null,1);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -102,8 +67,21 @@ public class Principal extends AppCompatActivity
         drawer.addDrawerListener(toggle);
         toggle.syncState();
 
+        try {
+            bd.createDataBase();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+
         NavigationView navigationView = findViewById(R.id.navPrincipal);
         navigationView.setNavigationItemSelectedListener(this);
+
+        //PruebaMetodo:
+        ConexionBD.getInstance(this.getApplicationContext()).abrirBD();
+        ConexionBD.getInstance(this.getApplicationContext()).mostarDatos();
+        ConexionBD.getInstance(this.getApplicationContext()).close();
+
     }
 
     @Override
