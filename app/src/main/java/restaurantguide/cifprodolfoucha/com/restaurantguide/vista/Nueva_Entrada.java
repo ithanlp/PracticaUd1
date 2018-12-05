@@ -29,6 +29,9 @@ import java.util.ArrayList;
 import java.util.UUID;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.controlador.ConexionBD;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
+import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.Plato;
 
 public class Nueva_Entrada extends Activity implements OnClickListener {
 
@@ -48,7 +51,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
     private RadioButton rbtnCercanos;
     private RadioButton rbtnGuardados;
     private RadioButton rbtnNuevo;
-    public static ArrayList<String> imags = new ArrayList<>();
+
     private Bitmap bit;
 
     @Override
@@ -82,12 +85,26 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
 
     public void onClick(View viev) {
         if (viev.getId() == btn.getId()) {
+            ImagenFav imag = new ImagenFav();
+            imag.setNombrePlato(etNombrePlato.getText().toString());
+            imag.setDescripcion(etDescripcion.getText().toString());
+            imag.setUri(etRuta.getText().toString());
+            if(chkFav.isSelected()) {
+                imag.setFavorito(1);
+            }else{
+                imag.setFavorito(0);
+            }
+            imag.setIdRestaurante(1);
 
+
+            ConexionBD.InsertarPlato(imag);
             finish();
         }
         if (viev.getId() == img.getId()) {
             foto();
         }
+
+
 
         //Pendiente de que fundione
 

@@ -78,10 +78,14 @@ public class Principal extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         //PruebaMetodo:
-        ConexionBD.getInstance(this.getApplicationContext()).abrirBD();
-        ConexionBD.getInstance(this.getApplicationContext()).mostarDatos();
-        ConexionBD.getInstance(this.getApplicationContext()).close();
-
+        ArrayList<ImagenFav> favs = new ArrayList<>();
+        //ConexionBD.getInstance(this.getApplicationContext()).abrirBD();
+        favs = ConexionBD.getInstance(this.getApplicationContext()).imagenesFavs();
+        //ConexionBD.getInstance(this.getApplicationContext()).mostarDatos();
+        //ConexionBD.getInstance(this.getApplicationContext()).close();
+        for (ImagenFav fav : favs) {
+            Toast.makeText(this, fav.toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

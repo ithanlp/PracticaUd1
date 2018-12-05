@@ -5,19 +5,19 @@ import android.widget.ImageView;
 
 public class ImagenFav {
     String uri;
-    Editable nombrePlato;
-    Editable nombreRestaurante;
-    Editable descripcion;
-    boolean favorito;
+    String nombrePlato;
+    int idRestaurante;
+    String descripcion;
+    int favorito;
 
     public ImagenFav() {
 
     }
 
-    public ImagenFav(String uri, Editable nombrePlato, Editable nombreRestaurante, Editable descripcion, boolean favorito) {
+    public ImagenFav(String uri, String nombrePlato, int idRestaurante, String descripcion, int favorito) {
         this.uri = uri;
         this.nombrePlato = nombrePlato;
-        this.nombreRestaurante = nombreRestaurante;
+        this.idRestaurante = idRestaurante;
         this.descripcion = descripcion;
         this.favorito = favorito;
     }
@@ -27,7 +27,7 @@ public class ImagenFav {
         return "ImagenFav{" +
                 "uri=" + uri +
                 ", nombrePlato=" + nombrePlato +
-                ", nombreRestaurante=" + nombreRestaurante +
+                ", idRestaurante=" + idRestaurante +
                 ", descripcion=" + descripcion +
                 ", favorito=" + favorito +
                 '}';
@@ -41,35 +41,38 @@ public class ImagenFav {
         this.uri = uri;
     }
 
-    public Editable getNombrePlato() {
+    public String getNombrePlato() {
         return nombrePlato;
     }
 
-    public void setNombrePlato(Editable nombrePlato) {
+    public void setNombrePlato(String nombrePlato) {
         this.nombrePlato = nombrePlato;
     }
 
-    public Editable getNombreRestaurante() {
-        return nombreRestaurante;
+    public int getIdRestaurante() {
+        return idRestaurante;
     }
 
-    public void setNombreRestaurante(Editable nombreRestaurante) {
-        this.nombreRestaurante = nombreRestaurante;
+    public void setIdRestaurante(int idRestaurante) {
+        this.idRestaurante = idRestaurante;
     }
 
-    public Editable getDescripcion() {
+    public String getDescripcion() {
         return descripcion;
     }
 
-    public void setDescripcion(Editable descripcion) {
+    public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
     }
 
-    public boolean isFavorito() {
+    public int isFavorito() {
         return favorito;
     }
 
-    public void setFavorito(boolean favorito) {
+    public int getFavorito() {
+        return favorito;
+    }
+    public void setFavorito(int favorito) {
         this.favorito = favorito;
     }
 
