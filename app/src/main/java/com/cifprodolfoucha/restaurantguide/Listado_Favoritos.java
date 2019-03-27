@@ -1,22 +1,14 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
+package com.cifprodolfoucha.restaurantguide;
 
-import android.content.Intent;
-import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.GridView;
-import android.widget.ListView;
-import android.widget.TextView;
 import android.widget.Toast;
 
-import java.lang.reflect.GenericArrayType;
-import java.util.ArrayList;
-
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImageAdapter;
+import com.cifprodolfoucha.restaurantguide.adaptadores.ImageAdapter;
 
 public class Listado_Favoritos extends AppCompatActivity {
 
@@ -35,7 +27,5 @@ public class Listado_Favoritos extends AppCompatActivity {
                             Toast.LENGTH_SHORT).show();
                 }
             });
-
-
     }
 }

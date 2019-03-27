@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
+package com.cifprodolfoucha.restaurantguide;
 
 import android.app.Activity;
 import android.content.Intent;

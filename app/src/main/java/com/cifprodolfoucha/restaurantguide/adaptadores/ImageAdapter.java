@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.modelo;
+package com.cifprodolfoucha.restaurantguide.adaptadores;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -9,12 +9,13 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 
+import com.cifprodolfoucha.restaurantguide.almacenamiento.ConexionBD;
+import com.cifprodolfoucha.restaurantguide.modelo.ImagenFav;
+
 import java.io.IOException;
 import java.util.ArrayList;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.controlador.ConexionBD;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.vista.Principal;
 
 public class ImageAdapter extends BaseAdapter {
     private Context mContext;

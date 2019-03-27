@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.controlador;
+package com.cifprodolfoucha.restaurantguide.almacenamiento;
 
 import android.content.ContentValues;
 import android.content.Context;
@@ -8,14 +8,13 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.widget.Toast;
 
+import com.cifprodolfoucha.restaurantguide.modelo.ImagenFav;
+
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.util.ArrayList;
-
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.Plato;
 
 public class ConexionBD extends SQLiteOpenHelper{
 

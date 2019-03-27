@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
+package com.cifprodolfoucha.restaurantguide;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImageAdapter;
+import com.cifprodolfoucha.restaurantguide.adaptadores.ImageAdapter;
 
 public class Listado_Restaurantes extends AppCompatActivity {
 
@@ -28,6 +28,5 @@ public class Listado_Restaurantes extends AppCompatActivity {
                         Toast.LENGTH_SHORT).show();
             }
         });
-
     }
 }

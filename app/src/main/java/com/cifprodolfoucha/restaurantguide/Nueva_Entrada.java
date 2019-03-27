@@ -1,11 +1,10 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
+package com.cifprodolfoucha.restaurantguide;
 
 import android.Manifest;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
@@ -25,13 +24,11 @@ import android.widget.Toast;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
-import java.util.ArrayList;
 import java.util.UUID;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.controlador.ConexionBD;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.Plato;
+import com.cifprodolfoucha.restaurantguide.almacenamiento.ConexionBD;
+import com.cifprodolfoucha.restaurantguide.modelo.ImagenFav;
 
 public class Nueva_Entrada extends Activity implements OnClickListener {
 
@@ -78,7 +75,7 @@ public class Nueva_Entrada extends Activity implements OnClickListener {
         rbtnNuevo = findViewById(R.id.rbtnNuevo);
         etDescripcion = findViewById(R.id.etDescripcion);
         etRuta = findViewById(R.id.etRuta);
-
+        
         img.setOnClickListener(this);
     }
 

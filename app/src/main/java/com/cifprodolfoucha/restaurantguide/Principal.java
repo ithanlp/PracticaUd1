@@ -1,10 +1,9 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.vista;
+package com.cifprodolfoucha.restaurantguide;
 
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.view.View;
@@ -18,16 +17,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
-import java.io.OutputStream;
 import java.util.ArrayList;
 
 import restaurantguide.cifprodolfoucha.com.restaurantguide.R;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.controlador.ConexionBD;
-import restaurantguide.cifprodolfoucha.com.restaurantguide.modelo.ImagenFav;
+import com.cifprodolfoucha.restaurantguide.almacenamiento.ConexionBD;
+import com.cifprodolfoucha.restaurantguide.modelo.ImagenFav;
 
 public class Principal extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {

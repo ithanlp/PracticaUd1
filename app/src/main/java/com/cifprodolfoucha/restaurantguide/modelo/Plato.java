@@ -1,4 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.modelo;
+package com.cifprodolfoucha.restaurantguide.modelo;
 
 
 public class Plato {

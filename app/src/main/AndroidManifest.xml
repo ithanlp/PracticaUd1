@@ -29,7 +29,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".vista.Principal"
+            android:name="com.cifprodolfoucha.restaurantguide.Principal"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar"
             android:screenOrientation="fullSensor">
@@ -39,10 +39,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".vista.Nueva_Entrada" />
-        <activity android:name=".vista.Opciones" />
-        <activity android:name=".vista.Listado_Restaurantes" />
-        <activity android:name=".vista.Listado_Favoritos"></activity>
+        <activity android:name="com.cifprodolfoucha.restaurantguide.Nueva_Entrada" />
+        <activity android:name="com.cifprodolfoucha.restaurantguide.Opciones" />
+        <activity android:name="com.cifprodolfoucha.restaurantguide.Listado_Restaurantes" />
+        <activity android:name="com.cifprodolfoucha.restaurantguide.Listado_Favoritos"></activity>
     </application>
 
 </manifest>

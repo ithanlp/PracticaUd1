@@ -1,7 +1,4 @@
-package restaurantguide.cifprodolfoucha.com.restaurantguide.modelo;
-
-import android.text.Editable;
-import android.widget.ImageView;
+package com.cifprodolfoucha.restaurantguide.modelo;
 
 public class ImagenFav {
     String uri;
